@@ -1,5 +1,62 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  script(src='https://www.gstatic.com/firebasejs/3.9.0/firebase.js')
+  .header
+    .logo
+      | axtion 
+      span Healty Culture with Machine Learning
+    .user_set
+      p Settings
+      p Log Out
+  .container
+    .sentiment
+      h3 Sentiment
+      #chart_circles.stats
+        .chart.joy_box(data-percent='0', data-scale-color='#aaaaaa')
+          .percentage
+            span 44
+            | %
+          .label Joy
+        .chart.fear_box(data-percent='0', data-scale-color='#aaaaaa')
+          .percentage
+            span 44
+            | %
+          .label Fear
+        .chart.disgust_box(data-percent='0', data-scale-color='#aaaaaa')
+          .percentage
+            span 44
+            | %
+          .label Disgust
+        .chart.anger_box(data-percent='0', data-scale-color='#aaaaaa')
+          .percentage
+            span 44
+            | %
+          .label Anger
+        .chart.sadness_box(data-percent='0', data-scale-color='#aaaaaa')
+          .percentage
+            span 44
+            | %
+          .label Sadness
+    .insights
+      h3 Insights
+      .text
+        | High Joy reduces turnover and increase productivity. To keep User happy relieve stress, acknowledge, challenge, and help them grow.
+    .morale
+      h3 Morale
+      canvas#morale_chart
+    .participation
+      h3 Participation
+      .time
+        span 0
+        |  / minute
+    .cloud
+      h3 Cloud
+      #keywords
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js')
+  script(src='/javascripts/script.js')
