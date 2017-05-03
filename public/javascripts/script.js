@@ -1,3 +1,5 @@
+// -- begin sphagetti code for hackathon.
+//Firebase key, fine to put their as firebase is restricted by referrer header
 var config = {
   apiKey: "AIzaSyAccAtHxQKGmrefBGSjG553kR2DZauzvIo",
   authDomain: "hackathon-fd920.firebaseapp.com",
@@ -6,6 +8,8 @@ var config = {
   storageBucket: "hackathon-fd920.appspot.com",
   messagingSenderId: "564664901970"
 };
+
+
 firebase.initializeApp(config);
 
 var database = firebase.database();
@@ -101,6 +105,8 @@ function generatePies() {
 }
 
 var cloud_timer = null;
+
+//activity timer only shows activity after you opened the dashboard, not too terribly bad.
 words_ref.on('value',function(snap){
   var words = snap.val();
   var data = [];
@@ -130,7 +136,7 @@ words_ref.on('value',function(snap){
 
 $('#keywords').jQCloud([{text:'customers', weight:3}], {width: 200, height: 200});
 
-
+//random insights, don't have enough time to correlate mood stats with insights right now
 var insights = [
 "Morale has been up over 60% for the last week, keep it up! See what's working?",
 "Oh no! Your team's participation went down by 20%. See why?",
