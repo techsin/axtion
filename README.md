@@ -30,3 +30,5 @@ This project was made for **CUNY Hackathon** in 1 day. Came in 3rd (honorable me
 It allows company managers to overview company's mood by analyzing what is being said on slack and set baseline, which they can see over days, weeks, months to see if general mood is improving or not. Turnover is biggest problem in Tech, and primary reason is unaddressed emotional needs. Future version would allow private and anonymous messaging to the bot. That would allow employees to give emotional feedback without repercussions of any kind. 
 
 
+
+![alt text](https://raw.githubusercontent.com/techsin/axtion/master/Captur1e.JPG)
